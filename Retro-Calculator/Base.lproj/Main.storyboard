@@ -37,30 +37,44 @@
                                     <constraint firstAttribute="height" constant="65" id="m6p-Pc-Khx"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CqA-Ir-xsb">
-                                <rect key="frame" x="181" y="127" width="240" height="417"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hR7-2p-4Gp">
+                                <rect key="frame" x="180" y="66" width="234" height="474"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="counter" translatesAutoresizingMaskIntoConstraints="NO" id="fQc-SE-0Pl">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="62"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CqA-Ir-xsb">
+                                        <rect key="frame" x="0.0" y="0.0" width="234" height="62"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="counter" translatesAutoresizingMaskIntoConstraints="NO" id="fQc-SE-0Pl">
+                                                <rect key="frame" x="0.0" y="0.0" width="234" height="62"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="62" id="asm-BQ-Se2"/>
+                                                    <constraint firstAttribute="width" constant="240" id="gQs-Ku-9fv"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backpanel" translatesAutoresizingMaskIntoConstraints="NO" id="nax-jG-sp6">
+                                        <rect key="frame" x="0.0" y="62" width="234" height="412"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="62" id="asm-BQ-Se2"/>
-                                            <constraint firstAttribute="width" constant="240" id="gQs-Ku-9fv"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backpanel" translatesAutoresizingMaskIntoConstraints="NO" id="nax-jG-sp6">
-                                        <rect key="frame" x="0.0" y="62" width="240" height="355"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="355" id="2Lm-kW-xkV"/>
+                                            <constraint firstAttribute="height" constant="450" id="2Lm-kW-xkV"/>
+                                            <constraint firstAttribute="height" constant="412" id="CtE-8f-aRc"/>
+                                            <constraint firstAttribute="width" constant="234" id="OBh-kj-FmD"/>
                                             <constraint firstAttribute="width" constant="261" id="sVu-b7-0CF"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="2Lm-kW-xkV"/>
+                                                <exclude reference="sVu-b7-0CF"/>
+                                            </mask>
+                                        </variation>
                                     </imageView>
                                 </subviews>
                                 <animations/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="MdY-xX-498">
-                                <rect key="frame" x="193" y="205" width="213" height="327"/>
+                                <rect key="frame" x="194" y="136" width="213" height="393"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="jpW-pG-Dg6">
                                         <rect key="frame" x="0.0" y="0.0" width="213" height="63"/>
@@ -272,11 +286,22 @@
                                         </subviews>
                                         <animations/>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfy-GY-qSV">
+                                        <rect key="frame" x="0.0" y="330" width="213" height="63"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="bSW-ks-AoH"/>
+                                        </constraints>
+                                        <state key="normal" image="clear"/>
+                                        <connections>
+                                            <action selector="onClearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BFG-2i-sDo"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akp-Rr-dg9">
-                                <rect key="frame" x="208" y="145" width="200" height="35"/>
+                                <rect key="frame" x="201" y="81" width="200" height="35"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="O4a-04-lRm"/>
@@ -289,18 +314,18 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="MdY-xX-498" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="10" id="33g-4a-EXV"/>
                             <constraint firstItem="YvN-5c-7Mv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Ic-yz-5Xl"/>
-                            <constraint firstItem="CqA-Ir-xsb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3xG-qW-uAr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3pA-n9-6F7" secondAttribute="bottom" id="4JP-ol-uBC"/>
-                            <constraint firstItem="MdY-xX-498" firstAttribute="centerX" secondItem="CqA-Ir-xsb" secondAttribute="centerX" id="6Bn-DY-QjH"/>
-                            <constraint firstItem="CqA-Ir-xsb" firstAttribute="trailing" secondItem="akp-Rr-dg9" secondAttribute="trailing" constant="10" id="EXs-dN-tjX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YvN-5c-7Mv" secondAttribute="bottom" id="GHM-2U-wiN"/>
-                            <constraint firstItem="CqA-Ir-xsb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IFV-3B-LWI"/>
+                            <constraint firstItem="hR7-2p-4Gp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gd0-bx-efE"/>
                             <constraint firstItem="3pA-n9-6F7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IRX-Pv-yJ3"/>
-                            <constraint firstItem="MdY-xX-498" firstAttribute="centerY" secondItem="CqA-Ir-xsb" secondAttribute="centerY" constant="32" id="P1e-uY-vLM"/>
+                            <constraint firstItem="akp-Rr-dg9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JfF-Ys-959"/>
+                            <constraint firstItem="hR7-2p-4Gp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20" id="PyM-UY-MZh"/>
+                            <constraint firstItem="MdY-xX-498" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vse-L7-syH"/>
                             <constraint firstAttribute="trailing" secondItem="3pA-n9-6F7" secondAttribute="trailing" id="aqD-TX-3Xz"/>
-                            <constraint firstItem="akp-Rr-dg9" firstAttribute="top" secondItem="CqA-Ir-xsb" secondAttribute="top" constant="16" id="hCH-vg-t7N"/>
                             <constraint firstItem="3pA-n9-6F7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kRl-tr-Dwy"/>
+                            <constraint firstItem="akp-Rr-dg9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-225" id="svj-bg-RWs"/>
                             <constraint firstAttribute="trailing" secondItem="YvN-5c-7Mv" secondAttribute="trailing" id="vZ5-sn-CH2"/>
                         </constraints>
                     </view>
@@ -326,6 +351,7 @@
         <image name="9" width="111" height="114"/>
         <image name="add" width="111" height="114"/>
         <image name="backpanel" width="620" height="938"/>
+        <image name="clear" width="333" height="114"/>
         <image name="counter" width="516" height="133"/>
         <image name="divide" width="111" height="114"/>
         <image name="equal" width="111" height="114"/>
